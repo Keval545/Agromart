@@ -26,4 +26,4 @@ So, whether you're a farmer looking to sell your produce or an agriculture enthu
 
 **Download the app now** and experience the future of agricultural trade.
 
-![AgroMart Logo](agromart.png) <!-- You can replace 'agromart-logo.png' with the actual logo file name. -->
+![AgroMart Logo](assets/agromart.png) <!-- You can replace 'agromart-logo.png' with the actual logo file name. -->q

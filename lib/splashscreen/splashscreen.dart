@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nihaljumailamrathaju/splashscreen/splashscreen2.dart';
@@ -29,22 +27,17 @@ class _ScreenSplashState extends State<ScreenSplash> {
           children: [
             Container(
               decoration: BoxDecoration(
-                border: Border.all(
-                  width: 8,
-                  color:const Color(0xff7f4ca5)
-                )
+                  border: Border.all(width: 8, color: const Color(0xff7f4ca5))),
+              child: Image.asset(
+                'assets/agromart.png',
+                width: 230,
+                height: 230,
               ),
-              child: Image.asset('assets/homebakery.png',
-              width: 230,
-              height: 230,),
             ),
           ],
         ),
-        
-         
-            ),
-      );
-    
+      ),
+    );
   }
 
   void waitingscreen() {

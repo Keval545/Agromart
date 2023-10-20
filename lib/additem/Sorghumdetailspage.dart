@@ -4,29 +4,30 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nihaljumailamrathaju/controllers/order.dart';
 
-class Puddingdetailspage extends StatefulWidget {
+class Sorghumdetailspage extends StatefulWidget {
   final String id;
 
-  const Puddingdetailspage(this.id, {super.key,required this.product});
+  const Sorghumdetailspage(this.id, {super.key, required this.product});
   final QueryDocumentSnapshot product;
 
   @override
-  State<Puddingdetailspage> createState() => _PuddingdetailspageState();
+  State<Sorghumdetailspage> createState() => _SorghumdetailspageState();
 }
 
-class _PuddingdetailspageState extends State<Puddingdetailspage> {
+class _SorghumdetailspageState extends State<Sorghumdetailspage> {
   final data1 = Get.put(Orderpage());
   void addtoCart() async {
-     Get.showSnackbar(const GetSnackBar(
+    Get.showSnackbar(
+      const GetSnackBar(
         duration: Duration(seconds: 3),
         padding: EdgeInsets.all(25),
         backgroundColor: Color(0xff7f4ca5),
-       messageText:  Text("The product is added to cart",
-       style: TextStyle(
-        color: Colors.white
-       ),), 
-       ),
-       );
+        messageText: Text(
+          "The product is added to cart",
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
     final FirebaseAuth auth = FirebaseAuth.instance;
     final currentuser = auth.currentUser;
     CollectionReference collectionRef =
@@ -36,12 +37,12 @@ class _PuddingdetailspageState extends State<Puddingdetailspage> {
       "name": widget.product["Item Name"],
       "price": widget.product["Price of Item"],
       "images": widget.product["URl"],
-      "netweight":widget.product["Net Weight"]
+      "netweight": widget.product["Net Weight"]
     }).then((value) => debugPrint("Added to Cart"));
   }
 
   Future addToFavourite() async {
-     Get.showSnackbar(
+    Get.showSnackbar(
       const GetSnackBar(
         duration: Duration(seconds: 3),
         padding: EdgeInsets.all(25),
@@ -60,7 +61,7 @@ class _PuddingdetailspageState extends State<Puddingdetailspage> {
       "name": widget.product["Item Name"],
       "price": widget.product["Price of Item"],
       "images": widget.product["URl"],
-      "netweight":widget.product["Net Weight"]
+      "netweight": widget.product["Net Weight"]
     }).then((value) => print("Added to favourite"));
   }
 
@@ -76,12 +77,13 @@ class _PuddingdetailspageState extends State<Puddingdetailspage> {
         .delete()
         .then((value) => print("Favourites deleted"));
   }
+
   @override
   Widget build(BuildContext context) {
     bool isUserLoggedIn = FirebaseAuth.instance.currentUser != null;
     CollectionReference users = FirebaseFirestore.instance
         .collection('Add item')
-        .doc('Pudding')
+        .doc('Sorghum')
         .collection('item');
 
     return FutureBuilder<DocumentSnapshot>(
@@ -101,8 +103,8 @@ class _PuddingdetailspageState extends State<Puddingdetailspage> {
               snapshot.data!.data() as Map<String, dynamic>;
           return SafeArea(
               child: Scaffold(
-                appBar: AppBar(
-                 backgroundColor:  const Color(0xff7f4ca5),
+            appBar: AppBar(
+              backgroundColor: const Color(0xff7f4ca5),
               actions: [
                 isUserLoggedIn
                     ? StreamBuilder(
@@ -116,9 +118,7 @@ class _PuddingdetailspageState extends State<Puddingdetailspage> {
                         builder: (BuildContext context,
                             AsyncSnapshot<QuerySnapshot> snapshot) {
                           if (snapshot.data == null) {
-                            return  Container(
-                              
-                            );
+                            return Container();
                           }
                           return Padding(
                             padding: const EdgeInsets.only(right: 8),
@@ -144,8 +144,8 @@ class _PuddingdetailspageState extends State<Puddingdetailspage> {
                         },
                       )
                     : Container(
-                      padding:const EdgeInsets.fromLTRB(200, 200, 200, 200),
-                    ),
+                        padding: const EdgeInsets.fromLTRB(200, 200, 200, 200),
+                      ),
               ],
             ),
             backgroundColor: Colors.pink[200],
@@ -156,19 +156,18 @@ class _PuddingdetailspageState extends State<Puddingdetailspage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SizedBox(
-                      // ignore: unrelated_type_equality_checks
-                          child: data['URl'] == ""
-                              ? Image.asset(
-                                  "assets/noimage.png",
-                                  width: 200,
-                                  height: 200,
-                                )
-                              : Image.network(
-                                  data['URl'],
-                                  width: 200,
-                                  height: 200,
-                                )
-                    ),
+                        // ignore: unrelated_type_equality_checks
+                        child: data['URl'] == ""
+                            ? Image.asset(
+                                "assets/noimage.png",
+                                width: 200,
+                                height: 200,
+                              )
+                            : Image.network(
+                                data['URl'],
+                                width: 200,
+                                height: 200,
+                              )),
                   ],
                 ),
                 const SizedBox(
@@ -238,17 +237,17 @@ class _PuddingdetailspageState extends State<Puddingdetailspage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        ElevatedButton(  style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xff7f4ca5)
-                          ),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xff7f4ca5)),
                           onPressed: () {
-                              addtoCart();  
+                            addtoCart();
                           },
                           child: const Text('Add to Cart'),
                         ),
-                        ElevatedButton(  style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xff7f4ca5)
-                          ),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xff7f4ca5)),
                           onPressed: () {
                             data1.order(context);
                           },

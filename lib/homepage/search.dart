@@ -13,11 +13,11 @@ List<String> listplace = [
 ];
 List<String> listitems = <String>[
   'Cotton',
-  'Pudding',
+  'Sorghum',
   'Snack',
   'wheat',
   'Sweets',
-  'Pizza'
+  'Rice'
 ];
 
 class Filterpage extends StatefulWidget {

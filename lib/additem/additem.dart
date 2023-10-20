@@ -12,11 +12,11 @@ import 'package:get/get.dart';
 
 List<String> listitems = <String>[
   'Cotton',
-  'Pudding',
+  'Sorghum',
   'Snack',
   'Ice Cream ',
   'Sweets',
-  'Pizza'
+  'Rice'
 ];
 List<String> listplace = <String>[
   'Malappuram',

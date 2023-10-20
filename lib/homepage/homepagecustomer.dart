@@ -85,19 +85,20 @@ class _HomepageCustomerState extends State<HomepageCustomer> {
                   FillImageCard(
                       width: 120,
                       heightImage: 150,
-                      imageProvider: const AssetImage('assets/puddinimage.jpg'),
+                      imageProvider:
+                          const AssetImage('assets/Sorghumimage.jpg'),
                       //tags: [_tag('Category', () {}), _tag('Product', () {})],
                       title: TextButton(
                         style: const ButtonStyle(
                             tapTargetSize: MaterialTapTargetSize.padded),
                         onPressed: () {
-                          Navigator.pushNamed(context, "Puddinglistview");
+                          Navigator.pushNamed(context, "Sorghumlistview");
                         },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: const [
                             Text(
-                              'PUDDINGS',
+                              'SorghumS',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
@@ -190,19 +191,19 @@ class _HomepageCustomerState extends State<HomepageCustomer> {
                   FillImageCard(
                     width: 120,
                     heightImage: 150,
-                    imageProvider: const AssetImage('assets/pizzaimage.jpg'),
+                    imageProvider: const AssetImage('assets/Riceimage.jpg'),
                     //tags: [_tag('Category', () {}), _tag('Product', () {})],
                     title: TextButton(
                       style: const ButtonStyle(
                           tapTargetSize: MaterialTapTargetSize.padded),
                       onPressed: () {
-                        Navigator.pushNamed(context, "Pizzalistview");
+                        Navigator.pushNamed(context, "Ricelistview");
                       },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
                           Text(
-                            'PIZZA',
+                            'Rice',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black),

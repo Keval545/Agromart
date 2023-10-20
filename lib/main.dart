@@ -4,8 +4,8 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:nihaljumailamrathaju/additem/additem.dart';
 import 'package:nihaljumailamrathaju/additem/Cottonlistview.dart';
 import 'package:nihaljumailamrathaju/additem/wheatitemview.dart';
-import 'package:nihaljumailamrathaju/additem/pizzalistview.dart';
-import 'package:nihaljumailamrathaju/additem/puddinglistview.dart';
+import 'package:nihaljumailamrathaju/additem/Ricelistview.dart';
+import 'package:nihaljumailamrathaju/additem/Sorghumlistview.dart';
 import 'package:nihaljumailamrathaju/additem/snakslistview.dart';
 import 'package:nihaljumailamrathaju/additem/sweetslistview.dart';
 import 'package:nihaljumailamrathaju/create_an_account/loginpage.dart';
@@ -49,10 +49,10 @@ class MyApp extends StatelessWidget {
         'homelayout': (context) => const Homepagelayout(),
         'additem': (context) => const Additempage(),
         "Cottonlistview": (context) => const Cottonlistview(),
-        "Puddinglistview": (context) => const Puddinglistview(),
+        "Sorghumlistview": (context) => const Sorghumlistview(),
         "Sweetslistview": (context) => const Sweetslistview(),
         "wheatlistview": (context) => const wheatlistview(),
-        "Pizzalistview": (context) => const Pizzalistview(),
+        "Ricelistview": (context) => const Ricelistview(),
         "Snacklistview": (context) => const Snacklistview(),
         "homepageseller": (context) => const Homepageseller(),
         "homepagecustomer": (context) => const HomepageCustomer()

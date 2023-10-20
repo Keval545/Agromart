@@ -1,16 +1,16 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-import 'package:nihaljumailamrathaju/additem/puddingdetailspage.dart';
+import 'package:nihaljumailamrathaju/additem/Ricedetailspage.dart';
 
-class Puddinglistview extends StatefulWidget {
-  const Puddinglistview({super.key});
+class Ricelistview extends StatefulWidget {
+  const Ricelistview({super.key});
 
   @override
-  State<Puddinglistview> createState() => _PuddinglistviewState();
+  State<Ricelistview> createState() => _RicelistviewState();
 }
 
-class _PuddinglistviewState extends State<Puddinglistview> {
+class _RicelistviewState extends State<Ricelistview> {
   @override
   Widget build(BuildContext context) {
     var firestore = FirebaseFirestore.instance;
@@ -24,7 +24,7 @@ class _PuddinglistviewState extends State<Puddinglistview> {
         body: StreamBuilder<QuerySnapshot>(
           stream: firestore
               .collection('Add item')
-              .doc('Pudding')
+              .doc('Rice')
               .collection('item')
               .orderBy('Price of Item', descending: true)
               .snapshots(),
@@ -58,12 +58,13 @@ class _PuddinglistviewState extends State<Puddinglistview> {
                           padding: const EdgeInsets.all(0),
                           child: Row(children: [
                             Expanded(
-                              flex: 6,
-                               child: snap[index]["URl"] == ""
-                              ?Image.asset("assets/noimage.png")
-                              :Image.network(snap[index]["URl"],
-                              fit: BoxFit.fill,)
-                            ),
+                                flex: 6,
+                                child: snap[index]["URl"] == ""
+                                    ? Image.asset("assets/noimage.png")
+                                    : Image.network(
+                                        snap[index]["URl"],
+                                        fit: BoxFit.fill,
+                                      )),
                             const Spacer(
                               flex: 1,
                             ),
@@ -112,7 +113,7 @@ class _PuddinglistviewState extends State<Puddinglistview> {
                                                 Navigator.of(context).push(
                                                     MaterialPageRoute(
                                                         builder: (_) =>
-                                                            Puddingdetailspage(
+                                                            Ricedetailspage(
                                                                 snapshot
                                                                     .data!
                                                                     .docs[index]
@@ -120,12 +121,11 @@ class _PuddinglistviewState extends State<Puddinglistview> {
                                                                 product: snap[
                                                                     index])));
                                               },
-                                                 child: const Text("Details",
-                                            style: TextStyle(
-                                              color:   Color(0xff7f4ca5),
-                                              fontSize: 16,
-                                            ),)),
-                                          
+                                              child: const Text("Details",
+                                                  style: TextStyle(
+                                                    color: Color(0xff7f4ca5),
+                                                    fontSize: 16,
+                                                  )))
                                         ],
                                       ),
                                     )

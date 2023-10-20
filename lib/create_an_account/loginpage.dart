@@ -63,7 +63,7 @@ class _LoginpageState extends State<Loginpage> {
                             alignment: Alignment.center,
                             padding: const EdgeInsets.all(10),
                             child: Image.asset(
-                              'assets/homebakery.png',
+                              'assets/agromart.png',
                               width: 200,
                               height: 200,
                             )),

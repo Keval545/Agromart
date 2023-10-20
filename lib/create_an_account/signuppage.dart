@@ -30,7 +30,7 @@ class Signup extends StatelessWidget {
                 width: double.infinity,
                 color: const Color(0xff7f4ca5),
                 child: Image.asset(
-                  'assets/homebakery-bgremoved.png',
+                  'assets/agromart.png',
                   width: 50,
                   height: 50,
                 ),
@@ -61,46 +61,49 @@ class Signup extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                     children: [
                       ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xff7f4ca5),
-                            minimumSize: const Size(50, 50)),
-                        onPressed: () {
-                          Get.to(() => const Signupforseller(), arguments: {
-                            "categorys": 'seller',
-                          });
-                        },
-                        child:SizedBox(
-                          height: 140,
-                          child: Column(children: [
-                            Image.asset("assets/sellerimage.png",
-                          width: 100,
-                          ),
-                          const Text("Seller"),
-                          ],),
-                        )
-                         
-                      ),
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xff7f4ca5),
+                              minimumSize: const Size(50, 50)),
+                          onPressed: () {
+                            Get.to(() => const Signupforseller(), arguments: {
+                              "categorys": 'seller',
+                            });
+                          },
+                          child: SizedBox(
+                            height: 140,
+                            child: Column(
+                              children: [
+                                Image.asset(
+                                  "assets/sellerimage.png",
+                                  width: 100,
+                                ),
+                                const Text("Seller"),
+                              ],
+                            ),
+                          )),
                       ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xff7f4ca5),
-                            minimumSize: const Size(100, 100)),
-                        onPressed: () {
-                          Get.to(() => const Signupforcustomer(),
-                              arguments: {"categorys": "customer"});
-                        },
-                        child:  SizedBox(
-                          height: 140,
-                          child: Column(children: [
-                            Image.asset("assets/customerimage.png",
-                          width: 100,
-                          ),
-                         const  SizedBox(
-                            height: 20,
-                          ),
-                          const Text("Customer"),
-                          ],),
-                        )
-                      ),
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xff7f4ca5),
+                              minimumSize: const Size(100, 100)),
+                          onPressed: () {
+                            Get.to(() => const Signupforcustomer(),
+                                arguments: {"categorys": "customer"});
+                          },
+                          child: SizedBox(
+                            height: 140,
+                            child: Column(
+                              children: [
+                                Image.asset(
+                                  "assets/customerimage.png",
+                                  width: 100,
+                                ),
+                                const SizedBox(
+                                  height: 20,
+                                ),
+                                const Text("Customer"),
+                              ],
+                            ),
+                          )),
                     ],
                   ),
                 ),

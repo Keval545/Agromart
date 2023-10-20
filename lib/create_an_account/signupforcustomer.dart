@@ -57,7 +57,7 @@ class _SignupforcustomerState extends State<Signupforcustomer> {
                     width: double.infinity,
                     color: const Color(0xffffafcc),
                     child: Image.asset(
-                      'assets/homebakery-bgremoved.png',
+                      'assets/agromart.png',
                       width: 50,
                       height: 50,
                     ),
@@ -175,12 +175,13 @@ class _SignupforcustomerState extends State<Signupforcustomer> {
                           }),
                           obscureText: true,
                           decoration: const InputDecoration(
-                              focusedBorder:  OutlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Color(0xffffafcc), width: 2.0),
-                              ),
-                              labelText: 'Confirm \n Login Password',
-                              prefixIcon:  Icon(Icons.password),),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Color(0xffffafcc), width: 2.0),
+                            ),
+                            labelText: 'Confirm \n Login Password',
+                            prefixIcon: Icon(Icons.password),
+                          ),
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.end,
@@ -198,7 +199,7 @@ class _SignupforcustomerState extends State<Signupforcustomer> {
                                     await auth.createUserWithEmailAndPassword(
                                         email: emailController.text,
                                         password: passwordController.text);
-                                              } on FirebaseAuthException catch (e) {
+                                  } on FirebaseAuthException catch (e) {
                                     switch (e.code) {
                                       case 'email-already-in-use':
                                         Get.showSnackbar(
@@ -213,61 +214,58 @@ class _SignupforcustomerState extends State<Signupforcustomer> {
                                         );
                                     }
                                   }
-                                    await Authmethods1().signUpusercustomer(
-                                        email: emailController.text,
-                                        password: passwordController.text,
-                                        username: usernameController.text,
-                                        phonenumber: phoneNumberController.text,
-                                        address: addressController.text,
-                                        platform: categorys);
+                                  await Authmethods1().signUpusercustomer(
+                                      email: emailController.text,
+                                      password: passwordController.text,
+                                      username: usernameController.text,
+                                      phonenumber: phoneNumberController.text,
+                                      address: addressController.text,
+                                      platform: categorys);
 
-                                    if (formKey.currentState!.validate()) {
-                                      Get.to(const Verifyemailpage(),
-                                          arguments: {
-                                            "email": emailController.text,
-                                          });
-                                      Get.showSnackbar(
-                                        GetSnackBar(
-                                          margin: const EdgeInsets.all(15),
-                                          borderRadius: 8,
-                                          message: 'Registration Succeeded',
-                                          duration: const Duration(seconds: 5),
-                                          backgroundColor:
-                                              Colors.green.shade400,
-                                        ),
-                                      );
-                                    } else {
-                                      Get.showSnackbar(
-                                        const GetSnackBar(
-                                          margin: EdgeInsets.all(15),
-                                          borderRadius: 8,
-                                          message: 'Registration Failed!',
-                                          icon: Icon(Icons.error),
-                                          duration: Duration(seconds: 3),
-                                          backgroundColor: Colors.red,
-                                        ),
-                                      );
-                                    }
-                            
+                                  if (formKey.currentState!.validate()) {
+                                    Get.to(const Verifyemailpage(), arguments: {
+                                      "email": emailController.text,
+                                    });
+                                    Get.showSnackbar(
+                                      GetSnackBar(
+                                        margin: const EdgeInsets.all(15),
+                                        borderRadius: 8,
+                                        message: 'Registration Succeeded',
+                                        duration: const Duration(seconds: 5),
+                                        backgroundColor: Colors.green.shade400,
+                                      ),
+                                    );
+                                  } else {
+                                    Get.showSnackbar(
+                                      const GetSnackBar(
+                                        margin: EdgeInsets.all(15),
+                                        borderRadius: 8,
+                                        message: 'Registration Failed!',
+                                        icon: Icon(Icons.error),
+                                        duration: Duration(seconds: 3),
+                                        backgroundColor: Colors.red,
+                                      ),
+                                    );
+                                  }
                                 }),
                           ],
                         ),
-                         Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children:  [
-                          const Text('Already have an Account?'),
-                          TextButton(onPressed:() {
-                             Get.to(() =>const Loginpage());
-                          }, child: const Text('Sign In',
-                          style: TextStyle(
-                            color:  Color.fromARGB(
-                                    255, 226, 119, 158),
-                                    fontSize: 20
-                          ),))
-
-                        ],
-
-                      )
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            const Text('Already have an Account?'),
+                            TextButton(
+                                onPressed: () {
+                                  Get.to(() => const Loginpage());
+                                },
+                                child: const Text(
+                                  'Sign In',
+                                  style: TextStyle(
+                                      color: Color.fromARGB(255, 226, 119, 158),
+                                      fontSize: 20),
+                                ))
+                          ],
+                        )
                       ],
                     ),
                   ),

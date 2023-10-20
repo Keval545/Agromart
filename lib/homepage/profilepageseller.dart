@@ -34,24 +34,19 @@ class ProfilepagesellerState extends State<Profilepageseller> {
     collectionreference.doc(currentUser).get().then((value) {
       setState(() {
         imageurl = value['Profile Picture'];
-        
       });
       collectionreferencedata.doc(currentUser).get().then((value) {
         setState(() {
           username = value['user name'];
           email = value['E-mail'];
           phonenumber = value['Phone number'];
-         
         });
       });
     });
   }
 
-  CollectionReference collectionreferencedata = FirebaseFirestore.instance.
-  collection('Users');
-   
-
-
+  CollectionReference collectionreferencedata =
+      FirebaseFirestore.instance.collection('Users');
 
   final ImagePicker picker = ImagePicker();
   Future selectOrTakePhoto(ImageSource imageSource) async {
@@ -87,7 +82,6 @@ class ProfilepagesellerState extends State<Profilepageseller> {
           .set({
         "Profile Picture": downloadUrls,
       });
-     
     } on FirebaseException catch (e) {
       print(e);
     }
@@ -135,7 +129,7 @@ class ProfilepagesellerState extends State<Profilepageseller> {
           child: AppBar(
             centerTitle: true,
             title: Image.asset(
-              'assets/homebakery-bgremoved.png',
+              'assets/agromart.png',
               width: 100,
               height: 100,
             ),
@@ -153,15 +147,13 @@ class ProfilepagesellerState extends State<Profilepageseller> {
                   GestureDetector(
                     onTap: () {
                       _showPicker(context);
-                      
                     },
                     child: SizedBox(
                         height: 150,
                         width: 150,
                         child: imageurl == ""
                             ? Image.asset('assets/user.jpg')
-                            : Image.network(imageurl)
-                            ),
+                            : Image.network(imageurl)),
                   ),
                 ],
               ),
@@ -175,9 +167,9 @@ class ProfilepagesellerState extends State<Profilepageseller> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-               Text(
-               username,
-                style:const  TextStyle(
+              Text(
+                username,
+                style: const TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w400,
                 ),
@@ -192,7 +184,7 @@ class ProfilepagesellerState extends State<Profilepageseller> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-               Text(
+              Text(
                 email,
                 style: const TextStyle(
                   fontSize: 15,
@@ -209,8 +201,8 @@ class ProfilepagesellerState extends State<Profilepageseller> {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-               Text(
-               phonenumber,
+              Text(
+                phonenumber,
                 style: const TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w400,

@@ -37,7 +37,7 @@ class _CartpageState extends State<Cartpage> {
                       width: 40,
                     ),
                     Image.asset(
-                      'assets/homebakery-bgremoved.png',
+                      'assets/agromart.png',
                       width: 100,
                       height: 100,
                     ),
@@ -101,9 +101,11 @@ class _CartpageState extends State<Cartpage> {
                                       flex: 6,
                                       child: Container(
                                         child: documentSnapshot["images"] == ""
-                                        ?Image.asset("assets/noimage.png")
-                                        :Image.network(documentSnapshot["images"],
-                                        fit: BoxFit.fill,),
+                                            ? Image.asset("assets/noimage.png")
+                                            : Image.network(
+                                                documentSnapshot["images"],
+                                                fit: BoxFit.fill,
+                                              ),
                                       ),
                                     ),
                                     const Spacer(
@@ -209,11 +211,13 @@ class _CartpageState extends State<Cartpage> {
                           child: Container(
                             color: const Color(0xffffafcc),
                             child: Text(
-'Total Price: \$${snapshot.data!.docs.isNotEmpty ? snapshot.data!.docs.map<int>((documentSnapshot) {
-  final price = int.tryParse(documentSnapshot['price'].trim()) ?? 0;
-  print('Price: $price');
-  return price;
-}).reduce((sum, price) => sum + price) : 0}',
+                              'Total Price: \$${snapshot.data!.docs.isNotEmpty ? snapshot.data!.docs.map<int>((documentSnapshot) {
+                                  final price = int.tryParse(
+                                          documentSnapshot['price'].trim()) ??
+                                      0;
+                                  print('Price: $price');
+                                  return price;
+                                }).reduce((sum, price) => sum + price) : 0}',
                               style: const TextStyle(
                                   fontSize: 20, fontWeight: FontWeight.bold),
                             ),

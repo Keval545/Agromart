@@ -4,16 +4,16 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:nihaljumailamrathaju/controllers/order.dart';
 
-class Icecreamdetailspage extends StatefulWidget {
+class wheatdetailspage extends StatefulWidget {
   final String id;
 
-  const Icecreamdetailspage(this.id, {super.key, required this.product});
+  const wheatdetailspage(this.id, {super.key, required this.product});
   final QueryDocumentSnapshot product;
   @override
-  State<Icecreamdetailspage> createState() => _IcecreamdetailspageState();
+  State<wheatdetailspage> createState() => _wheatdetailspageState();
 }
 
-class _IcecreamdetailspageState extends State<Icecreamdetailspage> {
+class _wheatdetailspageState extends State<wheatdetailspage> {
   void addtoCart() async {
     Get.showSnackbar(
       const GetSnackBar(
@@ -40,7 +40,7 @@ class _IcecreamdetailspageState extends State<Icecreamdetailspage> {
   }
 
   Future addToFavourite() async {
-     Get.showSnackbar(
+    Get.showSnackbar(
       const GetSnackBar(
         duration: Duration(seconds: 3),
         padding: EdgeInsets.all(25),
@@ -155,19 +155,18 @@ class _IcecreamdetailspageState extends State<Icecreamdetailspage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SizedBox(
-                     // ignore: unrelated_type_equality_checks
-                          child: data['URl'] == ""
-                              ? Image.asset(
-                                  "assets/noimage.png",
-                                  width: 200,
-                                  height: 200,
-                                )
-                              : Image.network(
-                                  data['URl'],
-                                  width: 200,
-                                  height: 200,
-                                )
-                    ),
+                        // ignore: unrelated_type_equality_checks
+                        child: data['URl'] == ""
+                            ? Image.asset(
+                                "assets/noimage.png",
+                                width: 200,
+                                height: 200,
+                              )
+                            : Image.network(
+                                data['URl'],
+                                width: 200,
+                                height: 200,
+                              )),
                   ],
                 ),
                 const SizedBox(

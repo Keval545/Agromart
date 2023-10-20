@@ -18,7 +18,7 @@ class Profilepagecustomer extends StatefulWidget {
 
 class ProfilepagecustomerState extends State<Profilepagecustomer> {
   File? _image;
-   String downloadUrls = ' ';
+  String downloadUrls = ' ';
   String imageurl = '';
   final ImagePicker picker = ImagePicker();
   String username = '  ';
@@ -26,17 +26,16 @@ class ProfilepagecustomerState extends State<Profilepagecustomer> {
   String phonenumber = '';
   String address = '';
 
-  CollectionReference collectionreference = FirebaseFirestore.instance.
-  collection('Users-Profile-Picture');
+  CollectionReference collectionreference =
+      FirebaseFirestore.instance.collection('Users-Profile-Picture');
   final currentuser = FirebaseAuth.instance.currentUser!.email;
 
   @override
-    void initState() {
+  void initState() {
     super.initState();
     collectionreference.doc(currentuser).get().then((value) {
       setState(() {
         imageurl = value['Profile Picture'];
-        
       });
       collectionreferencedata.doc(currentuser).get().then((value) {
         setState(() {
@@ -44,15 +43,13 @@ class ProfilepagecustomerState extends State<Profilepagecustomer> {
           email = value['E-mail'];
           phonenumber = value['Phone number'];
           address = value['Address'];
-         
         });
       });
     });
   }
-  
-  CollectionReference collectionreferencedata = FirebaseFirestore.instance.
-  collection('Users');
-   
+
+  CollectionReference collectionreferencedata =
+      FirebaseFirestore.instance.collection('Users');
 
   Future selectOrTakePhoto(ImageSource imageSource) async {
     final pickedFile = await picker.pickImage(source: imageSource);
@@ -79,7 +76,7 @@ class ProfilepagecustomerState extends State<Profilepagecustomer> {
       await uploadimage.putFile(_image!);
 
       downloadUrls = await uploadimage.getDownloadURL();
-     final auth = FirebaseAuth.instance;
+      final auth = FirebaseAuth.instance;
       final user = auth.currentUser!.email;
       await FirebaseFirestore.instance
           .collection('Users-Profile-Picture')
@@ -126,7 +123,6 @@ class ProfilepagecustomerState extends State<Profilepagecustomer> {
 
   @override
   Widget build(BuildContext context) {
-    
     return SafeArea(
       child: Scaffold(
         backgroundColor: const Color(0xffffafcc),
@@ -135,7 +131,7 @@ class ProfilepagecustomerState extends State<Profilepagecustomer> {
           child: AppBar(
             centerTitle: true,
             title: Image.asset(
-              'assets/homebakery-bgremoved.png',
+              'assets/agromart.png',
               width: 100,
               height: 100,
             ),
@@ -157,7 +153,7 @@ class ProfilepagecustomerState extends State<Profilepagecustomer> {
                     child: SizedBox(
                       height: 150,
                       width: 150,
-                      child: imageurl ==  ''
+                      child: imageurl == ''
                           ? Image.asset(
                               'assets/user.jpg') // set a placeholder image when no photo is set
                           : Image.network(imageurl),
@@ -168,70 +164,78 @@ class ProfilepagecustomerState extends State<Profilepagecustomer> {
               const SizedBox(
                 height: 30,
               ),
-              const Text('User Name',
-               style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w500 ,
-               ),),
-                Text(username,
-                style: const TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w400 ,
-               ),),
-
-
-                const SizedBox(
-                height: 30,
-              ),
-              const Text('E-Mail',
-               style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w500 ,
-               ),),
-                Text(email,
-                style:const  TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w400 ,
-               ),),
-
-
-                const SizedBox(
-                height: 30,
-              ),
-              const Text('Phone Number',
-               style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w500 ,
-               ),),
-                Text(phonenumber,
-                style: const TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w400 ,
-               ),),
-
-
-                const SizedBox(
-                height: 30,
-              ),
-              const Text('Address',
-               style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.w500 ,
-               ),),
-                Text(address,
-                style:const  TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w400 ,
-               ),),
-                const SizedBox(
-                height: 30,),
-
-
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xff7f4ca5),
-                  minimumSize: const Size(200, 30)
+              const Text(
+                'User Name',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
                 ),
+              ),
+              Text(
+                username,
+                style: const TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              const Text(
+                'E-Mail',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              Text(
+                email,
+                style: const TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              const Text(
+                'Phone Number',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              Text(
+                phonenumber,
+                style: const TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              const Text(
+                'Address',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+              Text(
+                address,
+                style: const TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w400,
+                ),
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xff7f4ca5),
+                      minimumSize: const Size(200, 30)),
                   onPressed: () {
                     FirebaseAuth.instance.signOut();
                     Get.to(() => const Loginpage());

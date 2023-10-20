@@ -33,7 +33,7 @@ class _CartcustomerpageState extends State<Cartcustomerpage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Image.asset(
-                      'assets/homebakery-bgremoved.png',
+                      'assets/agromart.png',
                       width: 100,
                       height: 100,
                     ),
@@ -91,9 +91,11 @@ class _CartcustomerpageState extends State<Cartcustomerpage> {
                                       flex: 6,
                                       child: Container(
                                         child: documentSnapshot["images"] == ""
-                                        ?Image.asset("assets/noimage.png")
-                                        :Image.network(documentSnapshot["images"],
-                                        fit: BoxFit.fill,),
+                                            ? Image.asset("assets/noimage.png")
+                                            : Image.network(
+                                                documentSnapshot["images"],
+                                                fit: BoxFit.fill,
+                                              ),
                                       ),
                                     ),
                                     const Spacer(

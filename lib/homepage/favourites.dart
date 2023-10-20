@@ -37,7 +37,7 @@ class _FavoritepageState extends State<Favoritepage> {
                       width: 40,
                     ),
                     Image.asset(
-                      'assets/homebakery-bgremoved.png',
+                      'assets/agromart.png',
                       width: 100,
                       height: 100,
                     ),
@@ -84,12 +84,13 @@ class _FavoritepageState extends State<Favoritepage> {
               } else {
                 return Expanded(
                   child: ListView.builder(
-                      itemCount:
-                          snapshot.data == null ? 0 : snapshot.data!.docs.length,
+                      itemCount: snapshot.data == null
+                          ? 0
+                          : snapshot.data!.docs.length,
                       itemBuilder: (_, index) {
                         DocumentSnapshot documentSnapshot =
                             snapshot.data!.docs[index];
-                
+
                         return Card(
                           color: const Color.fromARGB(255, 255, 248, 250),
                           margin: const EdgeInsets.all(20),
@@ -116,7 +117,8 @@ class _FavoritepageState extends State<Favoritepage> {
                                 child: Container(
                                   padding: const EdgeInsets.only(top: 5),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: <Widget>[
                                       Text(documentSnapshot['name'],
@@ -167,7 +169,7 @@ class _FavoritepageState extends State<Favoritepage> {
                                           ],
                                         ),
                                       ),
-                
+
                                       Row(
                                         children: <Widget>[
                                           TextButton(

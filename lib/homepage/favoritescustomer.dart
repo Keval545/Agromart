@@ -34,7 +34,7 @@ class _FavoritecustomerpageState extends State<Favoritecustomerpage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Image.asset(
-                      'assets/homebakery-bgremoved.png',
+                      'assets/agromart.png',
                       width: 100,
                       height: 100,
                     ),
@@ -75,12 +75,13 @@ class _FavoritecustomerpageState extends State<Favoritecustomerpage> {
               } else {
                 return Expanded(
                   child: ListView.builder(
-                      itemCount:
-                          snapshot.data == null ? 0 : snapshot.data!.docs.length,
+                      itemCount: snapshot.data == null
+                          ? 0
+                          : snapshot.data!.docs.length,
                       itemBuilder: (_, index) {
                         DocumentSnapshot documentSnapshot =
                             snapshot.data!.docs[index];
-                
+
                         return Card(
                           color: const Color.fromARGB(255, 255, 248, 250),
                           margin: const EdgeInsets.all(20),
@@ -90,11 +91,12 @@ class _FavoritecustomerpageState extends State<Favoritecustomerpage> {
                             child: Row(children: [
                               Expanded(
                                   flex: 6,
-                                  child: documentSnapshot['images']  == ''
-                                      ?Image.asset("assets/noimage.png") 
-                                      :Image.network(documentSnapshot['images'],
-                                      fit: BoxFit.fill,)
-                                       ),
+                                  child: documentSnapshot['images'] == ''
+                                      ? Image.asset("assets/noimage.png")
+                                      : Image.network(
+                                          documentSnapshot['images'],
+                                          fit: BoxFit.fill,
+                                        )),
                               const Spacer(
                                 flex: 1,
                               ),
@@ -103,7 +105,8 @@ class _FavoritecustomerpageState extends State<Favoritecustomerpage> {
                                 child: Container(
                                   padding: const EdgeInsets.only(top: 5),
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: <Widget>[
                                       Text(documentSnapshot['name'],
@@ -154,7 +157,7 @@ class _FavoritecustomerpageState extends State<Favoritecustomerpage> {
                                           ],
                                         ),
                                       ),
-                
+
                                       Row(
                                         children: <Widget>[
                                           TextButton(

@@ -37,7 +37,7 @@ class _HomepagesellerState extends State<Homepageseller> {
                       width: 40,
                     ),
                     Image.asset(
-                      'assets/homebakery-bgremoved.png',
+                      'assets/agromart.png',
                       width: 100,
                       height: 100,
                     ),
@@ -152,20 +152,19 @@ class _HomepagesellerState extends State<Homepageseller> {
 
                       width: 120,
                       heightImage: 150,
-                      imageProvider:
-                          const AssetImage('assets/icecreamimage.jpg'),
+                      imageProvider: const AssetImage('assets/wheatimage.jpg'),
                       //tags: [_tag('Category', () {}), _tag('Product', () {})],
                       title: TextButton(
                         style: const ButtonStyle(
                             tapTargetSize: MaterialTapTargetSize.padded),
                         onPressed: () {
-                          Navigator.pushNamed(context, "Icecreamlistview");
+                          Navigator.pushNamed(context, "wheatlistview");
                         },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: const [
                             Text(
-                              'ICE CREAMS',
+                              'wheat',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),

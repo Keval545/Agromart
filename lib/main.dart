@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:nihaljumailamrathaju/additem/additem.dart';
 import 'package:nihaljumailamrathaju/additem/Cottonlistview.dart';
-import 'package:nihaljumailamrathaju/additem/icecreamitemview.dart';
+import 'package:nihaljumailamrathaju/additem/wheatitemview.dart';
 import 'package:nihaljumailamrathaju/additem/pizzalistview.dart';
 import 'package:nihaljumailamrathaju/additem/puddinglistview.dart';
 import 'package:nihaljumailamrathaju/additem/snakslistview.dart';
@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
         "Cottonlistview": (context) => const Cottonlistview(),
         "Puddinglistview": (context) => const Puddinglistview(),
         "Sweetslistview": (context) => const Sweetslistview(),
-        "Icecreamlistview": (context) => const Icecreamlistview(),
+        "wheatlistview": (context) => const wheatlistview(),
         "Pizzalistview": (context) => const Pizzalistview(),
         "Snacklistview": (context) => const Snacklistview(),
         "homepageseller": (context) => const Homepageseller(),

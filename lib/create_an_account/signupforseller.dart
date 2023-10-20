@@ -1,4 +1,3 @@
-
 import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
@@ -22,12 +21,13 @@ class Signupforseller extends StatefulWidget {
 class _SignupforsellerState extends State<Signupforseller> {
   final categorys = Get.arguments["categorys"];
   bool _obscureText = true;
-  
-   void _toggle() {
+
+  void _toggle() {
     setState(() {
       _obscureText = !_obscureText;
     });
   }
+
   final emailController = TextEditingController();
   final otpcontroller = TextEditingController();
   final passwordController = TextEditingController();
@@ -135,7 +135,6 @@ class _SignupforsellerState extends State<Signupforseller> {
         body: Form(
           key: formKey,
           child: SingleChildScrollView(
-            
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
@@ -144,7 +143,7 @@ class _SignupforsellerState extends State<Signupforseller> {
                   width: double.infinity,
                   color: const Color(0xffffafcc),
                   child: Image.asset(
-                    'assets/homebakery-bgremoved.png',
+                    'assets/agromart.png',
                     width: 50,
                     height: 50,
                   ),
@@ -168,15 +167,13 @@ class _SignupforsellerState extends State<Signupforseller> {
                         }),
                         controller: usernameController,
                         decoration: const InputDecoration(
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color(0xffffafcc), width: 2.0),
-                          ),
-                          labelText: 'User Name',
-                          prefixIcon: Icon(Icons.account_circle)
-                        ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Color(0xffffafcc), width: 2.0),
+                            ),
+                            labelText: 'User Name',
+                            prefixIcon: Icon(Icons.account_circle)),
                       ),
-                     
                       TextFormField(
                         keyboardType: TextInputType.number,
                         validator: ((value) {
@@ -188,32 +185,30 @@ class _SignupforsellerState extends State<Signupforseller> {
                         }),
                         controller: phoneNumberController,
                         decoration: const InputDecoration(
-                          focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color(0xffffafcc), width: 2.0),
-                          ),
-                          labelText: 'Phone Number',
-                          prefixIcon: Icon(Icons.phone)
-                        ),
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Color(0xffffafcc), width: 2.0),
+                            ),
+                            labelText: 'Phone Number',
+                            prefixIcon: Icon(Icons.phone)),
                       ),
                       TextFormField(
-                          keyboardType: TextInputType.emailAddress,
-                          controller: emailController,
-                          validator: (value) {
-                            if (value!.isEmpty || !value.contains('@')) {
-                              return 'Please enter a valid email address';
-                            }
-                            return null;
-                          },
-                          decoration: const InputDecoration(
+                        keyboardType: TextInputType.emailAddress,
+                        controller: emailController,
+                        validator: (value) {
+                          if (value!.isEmpty || !value.contains('@')) {
+                            return 'Please enter a valid email address';
+                          }
+                          return null;
+                        },
+                        decoration: const InputDecoration(
                             focusedBorder: OutlineInputBorder(
                               borderSide: BorderSide(
                                   color: Color(0xffffafcc), width: 2.0),
                             ),
                             labelText: 'E-Mail',
-                            prefixIcon: Icon(Icons.email)
-                          ),
-                        ),
+                            prefixIcon: Icon(Icons.email)),
+                      ),
                       TextFormField(
                         validator: ((value) {
                           if (value!.length < 6) {
@@ -223,19 +218,20 @@ class _SignupforsellerState extends State<Signupforseller> {
                           }
                         }),
                         controller: passwordController,
-                        obscureText:  _obscureText,
-                        decoration:  InputDecoration(
-                          focusedBorder: const OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color(0xffffafcc), width: 2.0),
-                          ),
-                          labelText: 'Login Password',
-                          prefixIcon: const Icon(Icons.password),
-                          suffixIcon: IconButton(onPressed: _toggle
-                          , icon: _obscureText
-                        ? const Icon(Icons.visibility)
-                        : const Icon(Icons.visibility_off),)
-                        ),
+                        obscureText: _obscureText,
+                        decoration: InputDecoration(
+                            focusedBorder: const OutlineInputBorder(
+                              borderSide: BorderSide(
+                                  color: Color(0xffffafcc), width: 2.0),
+                            ),
+                            labelText: 'Login Password',
+                            prefixIcon: const Icon(Icons.password),
+                            suffixIcon: IconButton(
+                              onPressed: _toggle,
+                              icon: _obscureText
+                                  ? const Icon(Icons.visibility)
+                                  : const Icon(Icons.visibility_off),
+                            )),
                       ),
                       TextFormField(
                         validator: ((value) {
@@ -246,13 +242,13 @@ class _SignupforsellerState extends State<Signupforseller> {
                           }
                         }),
                         obscureText: true,
-                        decoration:  const InputDecoration(
-                          focusedBorder:   OutlineInputBorder(
+                        decoration: const InputDecoration(
+                          focusedBorder: OutlineInputBorder(
                             borderSide: BorderSide(
                                 color: Color(0xffffafcc), width: 2.0),
                           ),
                           labelText: 'Confirm \n Login Password',
-                          prefixIcon: Icon(Icons.password) ,
+                          prefixIcon: Icon(Icons.password),
                         ),
                       ),
                       Row(
@@ -261,8 +257,8 @@ class _SignupforsellerState extends State<Signupforseller> {
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                 minimumSize: const Size(100, 50),
-                                backgroundColor: const Color.fromARGB(
-                                    255, 226, 119, 158),
+                                backgroundColor:
+                                    const Color.fromARGB(255, 226, 119, 158),
                               ),
                               onPressed: () {
                                 _showPicker(context);
@@ -305,8 +301,8 @@ class _SignupforsellerState extends State<Signupforseller> {
                         children: [
                           ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                  backgroundColor: const Color.fromARGB(
-                                      255, 226, 119, 158),
+                                  backgroundColor:
+                                      const Color.fromARGB(255, 226, 119, 158),
                                   minimumSize: const Size(70, 40)),
                               child: const Text('Verify E-Mail and Login'),
                               onPressed: () async {
@@ -320,25 +316,21 @@ class _SignupforsellerState extends State<Signupforseller> {
                                       email: emailController.text,
                                       password: passwordController.text,
                                       username: usernameController.text,
-                                      phonenumber:
-                                          phoneNumberController.text,
+                                      phonenumber: phoneNumberController.text,
                                       downloadUrls: downloadUrl,
                                       platform: categorys);
-                                  
+
                                   if (formKey.currentState!.validate()) {
-                                    Get.to(const Verifyemailpage(),
-                                    arguments:{"email" : emailController.text});
+                                    Get.to(const Verifyemailpage(), arguments: {
+                                      "email": emailController.text
+                                    });
                                     Get.showSnackbar(
                                       GetSnackBar(
                                         margin: const EdgeInsets.all(15),
                                         borderRadius: 8,
-                                          
-                                        message:
-                                            'Registration Succeeded',
-                                        duration:
-                                            const Duration(seconds: 5),
-                                        backgroundColor:
-                                            Colors.green.shade400,
+                                        message: 'Registration Succeeded',
+                                        duration: const Duration(seconds: 5),
+                                        backgroundColor: Colors.green.shade400,
                                       ),
                                     );
                                   } else {
@@ -373,19 +365,19 @@ class _SignupforsellerState extends State<Signupforseller> {
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children:  [
+                        children: [
                           const Text('Already have an Account?'),
-                          TextButton(onPressed:() {
-                             Get.to(() =>const Loginpage());
-                          }, child: const Text('Sign In',
-                          style: TextStyle(
-                            color:  Color.fromARGB(
-                                    255, 226, 119, 158),
-                                    fontSize: 20
-                          ),))
-
+                          TextButton(
+                              onPressed: () {
+                                Get.to(() => const Loginpage());
+                              },
+                              child: const Text(
+                                'Sign In',
+                                style: TextStyle(
+                                    color: Color.fromARGB(255, 226, 119, 158),
+                                    fontSize: 20),
+                              ))
                         ],
-
                       )
                     ],
                   ),

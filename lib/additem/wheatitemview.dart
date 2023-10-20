@@ -23,7 +23,7 @@ class _wheatlistviewState extends State<wheatlistview> {
         body: StreamBuilder<QuerySnapshot>(
           stream: firestore
               .collection('Add item')
-              .doc('Ice Cream ')
+              .doc('wheat ')
               .collection('item')
               .orderBy('Price of Item', descending: true)
               .snapshots(),

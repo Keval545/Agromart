@@ -98,7 +98,7 @@ class _HomepageCustomerState extends State<HomepageCustomer> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: const [
                             Text(
-                              'SorghumS',
+                              'Sorghum',
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),

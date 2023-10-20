@@ -82,7 +82,7 @@ class _wheatdetailspageState extends State<wheatdetailspage> {
     bool isUserLoggedIn = FirebaseAuth.instance.currentUser != null;
     CollectionReference users = FirebaseFirestore.instance
         .collection('Add item')
-        .doc('Ice Cream ')
+        .doc('wheat ')
         .collection('item');
 
     return FutureBuilder<DocumentSnapshot>(

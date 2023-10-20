@@ -6,15 +6,9 @@ import 'package:kevalzalavadiya/additem/additem.dart';
 import 'package:kevalzalavadiya/controllers/order.dart';
 import 'package:kevalzalavadiya/homepage/search.dart';
 
-class Cartpage extends StatefulWidget {
-  const Cartpage({super.key});
-
-  @override
-  State<Cartpage> createState() => _CartpageState();
-}
-
-class _CartpageState extends State<Cartpage> {
+class Cartpage extends StatelessWidget {
   final data1 = Get.put(Orderpage());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -49,7 +49,7 @@ class _HomepagelayoutState extends State<Homepagelayout> {
   final sellerPages = [
     const Homepageseller(),
     const Favoritepage(),
-    const Cartpage(),
+    Cartpage(),
     const Profilepageseller(),
   ];
   final customerPages = [

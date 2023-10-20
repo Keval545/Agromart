@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:nihaljumailamrathaju/additem/Cottondetailspage.dart';
+import 'package:kevalzalavadiya/additem/Cottondetailspage.dart';
 
 class Cottonlistview extends StatefulWidget {
   const Cottonlistview({super.key});

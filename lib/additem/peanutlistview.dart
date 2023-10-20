@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-import 'package:nihaljumailamrathaju/additem/peanutdetailspage.dart';
+import 'package:kevalzalavadiya/additem/peanutdetailspage.dart';
 
 class peanutlistview extends StatefulWidget {
   const peanutlistview({super.key});

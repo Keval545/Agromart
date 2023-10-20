@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:nihaljumailamrathaju/create_an_account/loginpage.dart';
+import 'package:kevalzalavadiya/create_an_account/loginpage.dart';
 
 class Resetpasswordpage extends StatefulWidget {
   const Resetpasswordpage({super.key});
@@ -38,10 +38,10 @@ class _ResetpasswordpageState extends State<Resetpasswordpage> {
                   },
                   controller: emailController,
                   decoration: const InputDecoration(
-                     enabledBorder: OutlineInputBorder(
-                        borderSide:
-                            BorderSide(width: 2, color:Color(0xff7f4ca5)),
-                      ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide:
+                          BorderSide(width: 2, color: Color(0xff7f4ca5)),
+                    ),
                     focusedBorder: OutlineInputBorder(
                       borderSide:
                           BorderSide(color: Color(0xff7f4ca5), width: 2.0),
@@ -78,11 +78,11 @@ class _ResetpasswordpageState extends State<Resetpasswordpage> {
     if (_formKey.currentState!.validate()) {
       FirebaseAuth.instance.sendPasswordResetEmail(email: emailController.text);
       Get.off(() => const Loginpage());
-      Get.showSnackbar( GetSnackBar(
+      Get.showSnackbar(GetSnackBar(
         message: 'An Mail is sent to the $emails',
-        margin:  const EdgeInsets.all(15),
+        margin: const EdgeInsets.all(15),
         borderRadius: 8,
-        duration:  const Duration(seconds: 5),
+        duration: const Duration(seconds: 5),
         backgroundColor: Colors.green.shade400,
       ));
     }

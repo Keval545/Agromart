@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:nihaljumailamrathaju/controllers/order.dart';
+import 'package:kevalzalavadiya/controllers/order.dart';
 
 class wheatdetailspage extends StatefulWidget {
   final String id;

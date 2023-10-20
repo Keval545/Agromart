@@ -2,9 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:nihaljumailamrathaju/additem/additem.dart';
-import 'package:nihaljumailamrathaju/controllers/order.dart';
-import 'package:nihaljumailamrathaju/homepage/search.dart';
+import 'package:kevalzalavadiya/additem/additem.dart';
+import 'package:kevalzalavadiya/controllers/order.dart';
+import 'package:kevalzalavadiya/homepage/search.dart';
 
 class Cartpage extends StatefulWidget {
   const Cartpage({super.key});

@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-import 'package:nihaljumailamrathaju/additem/Sorghumdetailspage.dart';
+import 'package:kevalzalavadiya/additem/Sorghumdetailspage.dart';
 
 class Sorghumlistview extends StatefulWidget {
   const Sorghumlistview({super.key});

@@ -1,10 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:nihaljumailamrathaju/create_an_account/reset_password.dart';
-import 'package:nihaljumailamrathaju/create_an_account/signuppage.dart';
+import 'package:kevalzalavadiya/create_an_account/reset_password.dart';
+import 'package:kevalzalavadiya/create_an_account/signuppage.dart';
 
-import 'package:nihaljumailamrathaju/homepage/appbar_bottomnav.dart';
+import 'package:kevalzalavadiya/homepage/appbar_bottomnav.dart';
 
 class Loginpage extends StatefulWidget {
   const Loginpage({Key? key}) : super(key: key);

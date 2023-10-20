@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:nihaljumailamrathaju/create_an_account/loginpage.dart';
-import 'package:nihaljumailamrathaju/homepage/appbar_bottomnav.dart';
+import 'package:kevalzalavadiya/create_an_account/loginpage.dart';
+import 'package:kevalzalavadiya/homepage/appbar_bottomnav.dart';
 
 class Splashscreen2 extends StatelessWidget {
   const Splashscreen2({super.key});

@@ -2,12 +2,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:nihaljumailamrathaju/controllers/order.dart';
+import 'package:kevalzalavadiya/controllers/order.dart';
 
 class Snackdetailspage extends StatefulWidget {
   final String id;
 
-  const Snackdetailspage(this.id, {super.key,required this.product});
+  const Snackdetailspage(this.id, {super.key, required this.product});
   final QueryDocumentSnapshot product;
 
   @override
@@ -17,16 +17,17 @@ class Snackdetailspage extends StatefulWidget {
 class _SnackdetailspageState extends State<Snackdetailspage> {
   final data1 = Get.put(Orderpage());
   void addtoCart() async {
-     Get.showSnackbar(const GetSnackBar(
+    Get.showSnackbar(
+      const GetSnackBar(
         duration: Duration(seconds: 3),
         padding: EdgeInsets.all(25),
         backgroundColor: Color(0xff7f4ca5),
-       messageText:  Text("The product is added to cart",
-       style: TextStyle(
-        color: Colors.white
-       ),), 
-       ),
-       );
+        messageText: Text(
+          "The product is added to cart",
+          style: TextStyle(color: Colors.white),
+        ),
+      ),
+    );
     final FirebaseAuth auth = FirebaseAuth.instance;
     final currentuser = auth.currentUser;
     CollectionReference collectionRef =
@@ -36,12 +37,12 @@ class _SnackdetailspageState extends State<Snackdetailspage> {
       "name": widget.product["Item Name"],
       "price": widget.product["Price of Item"],
       "images": widget.product["URl"],
-      "netweight":widget.product["Net Weight"]
+      "netweight": widget.product["Net Weight"]
     }).then((value) => debugPrint("Added to Cart"));
   }
 
   Future addToFavourite() async {
-     Get.showSnackbar(
+    Get.showSnackbar(
       const GetSnackBar(
         duration: Duration(seconds: 3),
         padding: EdgeInsets.all(25),
@@ -60,7 +61,7 @@ class _SnackdetailspageState extends State<Snackdetailspage> {
       "name": widget.product["Item Name"],
       "price": widget.product["Price of Item"],
       "images": widget.product["URl"],
-      "netweight":widget.product["Net Weight"]
+      "netweight": widget.product["Net Weight"]
     }).then((value) => print("Added to favourite"));
   }
 
@@ -76,9 +77,10 @@ class _SnackdetailspageState extends State<Snackdetailspage> {
         .delete()
         .then((value) => print("Favourites deleted"));
   }
+
   @override
   Widget build(BuildContext context) {
-     bool isUserLoggedIn = FirebaseAuth.instance.currentUser != null;
+    bool isUserLoggedIn = FirebaseAuth.instance.currentUser != null;
     CollectionReference users = FirebaseFirestore.instance
         .collection('Add item')
         .doc('Snack')
@@ -101,8 +103,8 @@ class _SnackdetailspageState extends State<Snackdetailspage> {
               snapshot.data!.data() as Map<String, dynamic>;
           return SafeArea(
               child: Scaffold(
-                appBar: AppBar(
-                  backgroundColor: const Color(0xff7f4ca5),
+            appBar: AppBar(
+              backgroundColor: const Color(0xff7f4ca5),
               actions: [
                 isUserLoggedIn
                     ? StreamBuilder(
@@ -116,9 +118,7 @@ class _SnackdetailspageState extends State<Snackdetailspage> {
                         builder: (BuildContext context,
                             AsyncSnapshot<QuerySnapshot> snapshot) {
                           if (snapshot.data == null) {
-                            return  Container(
-                             
-                            );
+                            return Container();
                           }
                           return Padding(
                             padding: const EdgeInsets.only(right: 8),
@@ -144,8 +144,8 @@ class _SnackdetailspageState extends State<Snackdetailspage> {
                         },
                       )
                     : Container(
-                      padding:const EdgeInsets.fromLTRB(200, 200, 200, 200),
-                    ),
+                        padding: const EdgeInsets.fromLTRB(200, 200, 200, 200),
+                      ),
               ],
             ),
             backgroundColor: Colors.pink[200],
@@ -156,19 +156,18 @@ class _SnackdetailspageState extends State<Snackdetailspage> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SizedBox(
-                      // ignore: unrelated_type_equality_checks
-                          child: data['URl'] == ""
-                              ? Image.asset(
-                                  "assets/noimage.png",
-                                  width: 200,
-                                  height: 200,
-                                )
-                              : Image.network(
-                                  data['URl'],
-                                  width: 200,
-                                  height: 200,
-                                )
-                    ),
+                        // ignore: unrelated_type_equality_checks
+                        child: data['URl'] == ""
+                            ? Image.asset(
+                                "assets/noimage.png",
+                                width: 200,
+                                height: 200,
+                              )
+                            : Image.network(
+                                data['URl'],
+                                width: 200,
+                                height: 200,
+                              )),
                   ],
                 ),
                 const SizedBox(
@@ -238,19 +237,19 @@ class _SnackdetailspageState extends State<Snackdetailspage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        ElevatedButton(  style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xff7f4ca5)
-                          ),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xff7f4ca5)),
                           onPressed: () {
-                              addtoCart();
+                            addtoCart();
                           },
                           child: const Text('Add to Cart'),
                         ),
-                        ElevatedButton(  style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xff7f4ca5)
-                          ),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xff7f4ca5)),
                           onPressed: () {
-                          data1.order(context);
+                            data1.order(context);
                           },
                           child: const Text('Order'),
                         )

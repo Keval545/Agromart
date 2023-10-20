@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:nihaljumailamrathaju/additem/wheatdetailspage.dart';
+import 'package:kevalzalavadiya/additem/wheatdetailspage.dart';
 
 class wheatlistview extends StatefulWidget {
   const wheatlistview({super.key});

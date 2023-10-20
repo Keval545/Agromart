@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:nihaljumailamrathaju/create_an_account/signupforcustomer.dart';
-import 'package:nihaljumailamrathaju/create_an_account/signupforseller.dart';
+import 'package:kevalzalavadiya/create_an_account/signupforcustomer.dart';
+import 'package:kevalzalavadiya/create_an_account/signupforseller.dart';
 
 class Signup extends StatelessWidget {
   const Signup({super.key});

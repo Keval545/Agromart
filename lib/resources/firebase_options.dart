@@ -67,8 +67,9 @@ class DefaultFirebaseOptions {
     messagingSenderId: '36676984814',
     projectId: 'online-homebakery',
     storageBucket: 'online-homebakery.appspot.com',
-    iosClientId: '36676984814-0n5a40lsd9jk99g0v79p2td2vhd2h9hk.apps.googleusercontent.com',
-    iosBundleId: 'com.example.nihaljumailamrathaju',
+    iosClientId:
+        '36676984814-0n5a40lsd9jk99g0v79p2td2vhd2h9hk.apps.googleusercontent.com',
+    iosBundleId: 'com.example.kevalzalavadiya',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
@@ -77,7 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '36676984814',
     projectId: 'online-homebakery',
     storageBucket: 'online-homebakery.appspot.com',
-    iosClientId: '36676984814-0n5a40lsd9jk99g0v79p2td2vhd2h9hk.apps.googleusercontent.com',
-    iosBundleId: 'com.example.nihaljumailamrathaju',
+    iosClientId:
+        '36676984814-0n5a40lsd9jk99g0v79p2td2vhd2h9hk.apps.googleusercontent.com',
+    iosBundleId: 'com.example.kevalzalavadiya',
   );
 }

@@ -5,7 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:nihaljumailamrathaju/create_an_account/loginpage.dart';
+import 'package:kevalzalavadiya/create_an_account/loginpage.dart';
 
 import 'package:path/path.dart';
 

@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:nihaljumailamrathaju/homepage/searchdetailspage.dart';
+import 'package:kevalzalavadiya/homepage/searchdetailspage.dart';
 
 List<String> listplace = [
   'Nadiad',

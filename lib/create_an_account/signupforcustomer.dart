@@ -1,10 +1,10 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:nihaljumailamrathaju/create_an_account/loginpage.dart';
-import 'package:nihaljumailamrathaju/create_an_account/verifyemail.dart';
+import 'package:kevalzalavadiya/create_an_account/loginpage.dart';
+import 'package:kevalzalavadiya/create_an_account/verifyemail.dart';
 
-import 'package:nihaljumailamrathaju/resources/authpagecustomer.dart';
+import 'package:kevalzalavadiya/resources/authpagecustomer.dart';
 
 class Signupforcustomer extends StatefulWidget {
   const Signupforcustomer({super.key});

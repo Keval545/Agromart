@@ -1,12 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
-import 'package:nihaljumailamrathaju/controllers/profilepagesellercontroller.dart';
-
-
-
+import 'package:kevalzalavadiya/controllers/profilepagesellercontroller.dart';
 
 class Authmethods2 {
-  final data =  Get.put(TestController());
+  final data = Get.put(TestController());
 
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
 
@@ -33,7 +30,6 @@ class Authmethods2 {
           "Password": password,
           "Categorys": platform,
           "Licence Image": downloadUrls,
-        
         });
       }
     } catch (err) {

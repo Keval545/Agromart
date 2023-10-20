@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:nihaljumailamrathaju/controllers/editproductscontroller.dart';
+import 'package:kevalzalavadiya/controllers/editproductscontroller.dart';
 
 class Productdetailedpage extends StatefulWidget {
   const Productdetailedpage({super.key});
@@ -109,6 +109,4 @@ class _ProductdetailedpageState extends State<Productdetailedpage> {
       ),
     );
   }
-
-
 }

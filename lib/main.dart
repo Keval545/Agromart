@@ -1,20 +1,20 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:nihaljumailamrathaju/additem/additem.dart';
-import 'package:nihaljumailamrathaju/additem/Cottonlistview.dart';
-import 'package:nihaljumailamrathaju/additem/wheatitemview.dart';
-import 'package:nihaljumailamrathaju/additem/Ricelistview.dart';
-import 'package:nihaljumailamrathaju/additem/Sorghumlistview.dart';
-import 'package:nihaljumailamrathaju/additem/snakslistview.dart';
-import 'package:nihaljumailamrathaju/additem/peanutlistview.dart';
-import 'package:nihaljumailamrathaju/create_an_account/loginpage.dart';
-import 'package:nihaljumailamrathaju/create_an_account/signuppage.dart';
-import 'package:nihaljumailamrathaju/homepage/appbar_bottomnav.dart';
-import 'package:nihaljumailamrathaju/homepage/homepagecustomer.dart';
-import 'package:nihaljumailamrathaju/homepage/homepageseller.dart';
+import 'package:kevalzalavadiya/additem/additem.dart';
+import 'package:kevalzalavadiya/additem/Cottonlistview.dart';
+import 'package:kevalzalavadiya/additem/wheatitemview.dart';
+import 'package:kevalzalavadiya/additem/Ricelistview.dart';
+import 'package:kevalzalavadiya/additem/Sorghumlistview.dart';
+import 'package:kevalzalavadiya/additem/snakslistview.dart';
+import 'package:kevalzalavadiya/additem/peanutlistview.dart';
+import 'package:kevalzalavadiya/create_an_account/loginpage.dart';
+import 'package:kevalzalavadiya/create_an_account/signuppage.dart';
+import 'package:kevalzalavadiya/homepage/appbar_bottomnav.dart';
+import 'package:kevalzalavadiya/homepage/homepagecustomer.dart';
+import 'package:kevalzalavadiya/homepage/homepageseller.dart';
 import 'package:get/get.dart';
-import 'package:nihaljumailamrathaju/splashscreen/splashscreen2.dart';
+import 'package:kevalzalavadiya/splashscreen/splashscreen2.dart';
 import 'resources/firebase_options.dart';
 
 void main() async {

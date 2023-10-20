@@ -1,14 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:nihaljumailamrathaju/homepage/cartcustomer.dart';
-import 'package:nihaljumailamrathaju/homepage/cartpage.dart';
-import 'package:nihaljumailamrathaju/homepage/favoritescustomer.dart';
-import 'package:nihaljumailamrathaju/homepage/favourites.dart';
-import 'package:nihaljumailamrathaju/homepage/homepagecustomer.dart';
-import 'package:nihaljumailamrathaju/homepage/homepageseller.dart';
-import 'package:nihaljumailamrathaju/homepage/profilepagecustomer.dart';
-import 'package:nihaljumailamrathaju/homepage/profilepageseller.dart';
+import 'package:kevalzalavadiya/homepage/cartcustomer.dart';
+import 'package:kevalzalavadiya/homepage/cartpage.dart';
+import 'package:kevalzalavadiya/homepage/favoritescustomer.dart';
+import 'package:kevalzalavadiya/homepage/favourites.dart';
+import 'package:kevalzalavadiya/homepage/homepagecustomer.dart';
+import 'package:kevalzalavadiya/homepage/homepageseller.dart';
+import 'package:kevalzalavadiya/homepage/profilepagecustomer.dart';
+import 'package:kevalzalavadiya/homepage/profilepageseller.dart';
 
 class Homepagelayout extends StatefulWidget {
   const Homepagelayout({super.key});

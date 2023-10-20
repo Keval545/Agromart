@@ -5,10 +5,10 @@ import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:nihaljumailamrathaju/create_an_account/loginpage.dart';
-import 'package:nihaljumailamrathaju/create_an_account/verifyemail.dart';
+import 'package:kevalzalavadiya/create_an_account/loginpage.dart';
+import 'package:kevalzalavadiya/create_an_account/verifyemail.dart';
 
-import 'package:nihaljumailamrathaju/resources/authpageseller.dart';
+import 'package:kevalzalavadiya/resources/authpageseller.dart';
 import 'package:path/path.dart';
 
 class Signupforseller extends StatefulWidget {

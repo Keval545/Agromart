@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:nihaljumailamrathaju/splashscreen/splashscreen2.dart';
+import 'package:kevalzalavadiya/splashscreen/splashscreen2.dart';
 
 class ScreenSplash extends StatefulWidget {
   const ScreenSplash({super.key});

@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:image_card/image_card.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:nihaljumailamrathaju/homepage/search.dart';
+import 'package:kevalzalavadiya/homepage/search.dart';
 
 class Homepageseller extends StatefulWidget {
   const Homepageseller({super.key});

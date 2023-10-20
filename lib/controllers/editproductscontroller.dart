@@ -178,7 +178,7 @@ class Editproductcontroller extends GetxController {
         .collection("item")
         .doc(itemnames)
         .update({
-      "Baker Description": bakersdescription.text,
+      "Farmer Description": bakersdescription.text,
       "Item Description": itemdescription.text,
       "Item Name": itemname.text,
       "Net Weight": netweight.text,

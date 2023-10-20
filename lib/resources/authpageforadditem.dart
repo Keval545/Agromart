@@ -31,7 +31,7 @@ class Authmethods3 {
           "Item Description": itemdescription,
           "Price of Item": priceofitem,
           "Net Weight": netweight,
-          "Baker Description": bakersdescription,
+          "Farmer Description": bakersdescription,
           "URl": downloadUrl,
           "Image Name": fileName,
           'place': productionplace
@@ -40,13 +40,14 @@ class Authmethods3 {
         await _firestore
             .collection('User-Add Item')
             .doc(currentuser)
-            .collection('item').doc(itemname)
+            .collection('item')
+            .doc(itemname)
             .set({
           "Item Name": itemname,
           "Item Description": itemdescription,
           "Price of Item": priceofitem,
           "Net Weight": netweight,
-          "Baker Description": bakersdescription,
+          "Farmer Description": bakersdescription,
           "URl": downloadUrl,
           "Image Name": fileName,
         });
@@ -60,7 +61,7 @@ class Authmethods3 {
           "Item Description": itemdescription,
           "Price of Item": priceofitem,
           "Net Weight": netweight,
-          "Baker Description": bakersdescription,
+          "Farmer Description": bakersdescription,
           "URl": downloadUrl,
           "Image Name": fileName,
           'place': productionplace

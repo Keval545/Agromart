@@ -226,7 +226,7 @@ class _wheatdetailspageState extends State<wheatdetailspage> {
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
                     ),
                     Text(
-                      data['Baker Description'],
+                      data['Farmer Description'],
                       style: const TextStyle(
                           fontWeight: FontWeight.bold, fontSize: 15),
                     ),

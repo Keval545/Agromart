@@ -297,7 +297,7 @@ class _AdditempageState extends State<Additempage> {
                           borderSide:
                               BorderSide(color: Color(0xff7f4ca5), width: 2.0),
                         ),
-                        labelText: 'Baker Description',
+                        labelText: 'Farmer Description',
                         labelStyle: TextStyle(
                           color: Colors.black,
                         )),

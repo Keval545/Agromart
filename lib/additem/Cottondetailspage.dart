@@ -230,7 +230,7 @@ class _CottondetailspageState extends State<Cottondetailspage> {
                             fontWeight: FontWeight.bold, fontSize: 20),
                       ),
                       Text(
-                        data['Baker Description'],
+                        data['Farmer Description'],
                         style: const TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 15),
                       ),

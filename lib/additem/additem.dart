@@ -15,7 +15,7 @@ List<String> listitems = <String>[
   'Sorghum',
   'Snack',
   'Ice Cream ',
-  'Sweets',
+  'peanut',
   'Rice'
 ];
 List<String> listplace = <String>[

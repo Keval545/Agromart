@@ -83,7 +83,7 @@ class _SweetdetailspageState extends State<Sweetdetailspage> {
     bool isUserLoggedIn = FirebaseAuth.instance.currentUser != null;
     CollectionReference users = FirebaseFirestore.instance
         .collection('Add item')
-        .doc('Sweets')
+        .doc('peanut')
         .collection('item');
 
     return FutureBuilder<DocumentSnapshot>(

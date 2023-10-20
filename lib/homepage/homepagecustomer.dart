@@ -167,19 +167,19 @@ class _HomepageCustomerState extends State<HomepageCustomer> {
                   FillImageCard(
                     width: 120,
                     heightImage: 150,
-                    imageProvider: const AssetImage('assets/sweetsimage.jpg'),
+                    imageProvider: const AssetImage('assets/peanutimage.jpg'),
                     //tags: [_tag('Category', () {}), _tag('Product', () {})],
                     title: TextButton(
                       style: const ButtonStyle(
                           tapTargetSize: MaterialTapTargetSize.padded),
                       onPressed: () {
-                        Navigator.pushNamed(context, "Sweetslistview");
+                        Navigator.pushNamed(context, "peanutlistview");
                       },
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
                           Text(
-                            'SWEETS',
+                            'peanut',
                             style: TextStyle(
                                 fontWeight: FontWeight.bold,
                                 color: Colors.black),

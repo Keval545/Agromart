@@ -16,7 +16,7 @@ List<String> listitems = <String>[
   'Sorghum',
   'Snack',
   'wheat',
-  'Sweets',
+  'peanut',
   'Rice'
 ];
 

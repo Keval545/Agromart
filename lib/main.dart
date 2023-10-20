@@ -7,7 +7,7 @@ import 'package:nihaljumailamrathaju/additem/wheatitemview.dart';
 import 'package:nihaljumailamrathaju/additem/Ricelistview.dart';
 import 'package:nihaljumailamrathaju/additem/Sorghumlistview.dart';
 import 'package:nihaljumailamrathaju/additem/snakslistview.dart';
-import 'package:nihaljumailamrathaju/additem/sweetslistview.dart';
+import 'package:nihaljumailamrathaju/additem/peanutlistview.dart';
 import 'package:nihaljumailamrathaju/create_an_account/loginpage.dart';
 import 'package:nihaljumailamrathaju/create_an_account/signuppage.dart';
 import 'package:nihaljumailamrathaju/homepage/appbar_bottomnav.dart';
@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
         'additem': (context) => const Additempage(),
         "Cottonlistview": (context) => const Cottonlistview(),
         "Sorghumlistview": (context) => const Sorghumlistview(),
-        "Sweetslistview": (context) => const Sweetslistview(),
+        "peanutlistview": (context) => const peanutlistview(),
         "wheatlistview": (context) => const wheatlistview(),
         "Ricelistview": (context) => const Ricelistview(),
         "Snacklistview": (context) => const Snacklistview(),

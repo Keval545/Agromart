@@ -4,12 +4,12 @@ import 'package:get/get.dart';
 import 'package:nihaljumailamrathaju/homepage/searchdetailspage.dart';
 
 List<String> listplace = [
-  'Malappuram',
-  'Manjeri',
-  'Perinthalmanna',
-  'Areacode',
-  'Nilambur',
-  'Anakkayam'
+  'Nadiad',
+  'Anand',
+  'Amreli',
+  'Bhavnagar',
+  'Ahmdabad',
+  'Surat'
 ];
 List<String> listitems = <String>[
   'Cotton',

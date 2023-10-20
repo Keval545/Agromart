@@ -19,12 +19,12 @@ List<String> listitems = <String>[
   'Rice'
 ];
 List<String> listplace = <String>[
-  'Malappuram',
-  'Manjeri',
-  'Perinthalmanna',
-  'Areacode',
-  'Nilambur',
-  'Anakkayam'
+  'Nadiad',
+  'Anand',
+  'Amreli',
+  'Bhavnagar',
+  'Ahmdabad',
+  'Surat'
 ];
 
 class Additempage extends StatefulWidget {
